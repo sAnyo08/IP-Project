@@ -1,0 +1,231 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: "Play", sans-serif;
+    background-color: #e4e3e3;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Play", sans-serif;
+    background-color: #e4e3e3;
+}
+
+.navbar {
+    position: fixed; /* Ensure the navbar stays at the top */
+    top: 0; /* Position it at the top */
+    left: 0;
+    width: 100%; /* Make it full-width */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #030303;
+    padding: 20px;
+    z-index: 1000; /* Ensure it appears above other elements */
+}
+
+.navbar img {
+    height: 20px;
+}
+
+.navbar-links ul {
+    display: flex;
+    margin-left: auto;
+}
+
+.navbar-links li {
+    border-radius: 35px;
+    margin: 0px 25px;
+    font-weight: bold;
+    font-family: "Play", sans-serif;
+}
+
+.navbar-links a {
+    text-decoration: none;
+    color: red;
+    font-size: 20px;
+}
+
+.main-box {
+    display: flex;
+    background-color: white;
+    margin-top: 80px; /* Add margin to prevent content overlap with fixed navbar */
+}
+
+/* ----------------------------------- */
+#blog-container {
+    display: flex;
+    flex-wrap: wrap;
+    columns:4;
+    column-gap: 10px;
+    /* justify-content: center; */
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+    margin-top: 100px;
+    overflow: hidden;
+}
+
+.blog-card {
+    display: block; /* Change to block to allow full control over content width */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    width: auto; /* Ensure the card fits its content */
+    max-width: 100%; /* Prevents overflow on smaller screens */
+}
+
+.blog-card img {
+    max-width: 600px; /* Set the maximum width of the image */
+    width: 100%; /* Image takes full width of the card */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+}
+
+.blog-card h2, .blog-card p, .blog-card h5 {
+    margin: 15px;
+    color: #333;
+    width: 500px; 
+}
+
+.blog-card h2 {
+    font-size: 20px;
+}
+
+.blog-card p {
+    font-size: 14px;
+    color: #666;
+}
+
+.blog-card h5 {
+    font-size: 12px;
+    color: #999;
+    text-align: right;
+}
+
+
+
+@media (max-width: 768px) {
+    .blog-card {
+        width: 100%; /* Full-width on smaller screens */
+    }
+}
+
+
+.navbar {
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    background-color: #030303;
+    text-decoration: none;
+    padding: 20px;
+    
+}
+.navbar img{
+    height: 20px;
+}
+.navbar-links ul{
+    display: flex;    
+}
+.navbar-links li {
+    /* background-color: white; */
+    border-radius: 35px 35px 35px 35px;
+    margin: 0px 25px;
+    font-weight: bold;
+    font-family:"Play", sans-serif;
+}
+.navbar-links a{
+    text-decoration: none;
+    color: red;
+    font-size: 20px;
+}
+.navbar-links{
+    margin-left: auto;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  /* --------------------------------------------------------------------------------- */
+.main-box{
+    display: flex;
+    background-color:white;
+}
+.footer-box{
+    background-color: #000000;
+    /* position:fixed; */
+    bottom: 0;
+    max-height: 200px;
+    margin-bottom:auto;
+    width: 100%;
+    
+}
+.footer-box p{
+    font-size: 15px;
+    color: grey;
+}
+/* ---------------main content------------------------------ */
+form {
+    display: flex;
+    flex-direction: column;
+}
+input, textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    max-width: 300px;
+}
+
+input[type="text"], 
+input[type="url"], 
+textarea {
+    background-color: #F9FAFB;
+    color: #374151;
+}
+
+button {
+    background-color: #ff0000;
+    color: white;
+    padding: 7px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    /* margin-top: 20px; */
+    /* justify-content:flex-end; */
+    align-items: center;
+    width: 130px;
+    margin-top: 7px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+button:hover {
+    background-color: #cd0000;
+}
+
+.upload{
+    background-color: #000000;
+    color: white;
+    /* padding: 10px; */
+    border-radius: 10px;
+    /* margin:5px; */
+    height: 45px;
+    width: 150px;
+    position: fixed;
+    top: 0;
+    justify-content: center;
+    margin-top: 70px;
+    margin-left: 100px;
+}
+
+

@@ -1,0 +1,86 @@
+[
+    {
+        "image":"../images/Lewis.png",
+        "name":"Lewis Hamilton",
+        "title":"Mercedes",
+        "button":"More info",
+        "link":"./PlayersDetail/Lewis.html"
+    },
+    {
+        "image":"../images/Charles.png",
+        "name":"Charles Leclerc",
+        "title":"Ferrari",
+        "button":"More info",
+        "link":"./PlayersDetail/Charles.html"
+    },
+    {
+        "image":"../images/Nico.png",
+        "name":"Nico Hulkenberg",
+        "title":"Renault",
+        "button":"More info",
+        "link":"./PlayersDetail/Nico.html"
+    },
+    {
+        "image":"../images/Max.png",
+        "name":"Max Verstappen",
+        "title":"Red Bull",
+        "button":"More info",
+        "link":"./PlayersDetail/Max.html"
+    },
+    {
+        "image":"../images/Carlos.png",
+        "name":"Carlos Sainz",
+        "title":"Ferrari",
+        "button":"More info",
+        "link":"./PlayersDetail/Carlos.html"
+    },
+    {
+        "image":"../images/Lando.png",
+        "name":"Lando Norris",
+        "title":"McLaren",
+        "button":"More info",
+        "link":"./PlayersDetail/Lando.html"
+    },
+    {
+        "image":"../images/Fernando.png",
+        "name":"Fernando Alonso",
+        "title":"Aston Martin",
+        "button":"More info",
+        "link":"./PlayersDetail/Fernando.html"
+    },
+    {
+        "image": "../images/Yuki.png",
+        "name": "Yuki Tsunoda",
+        "title": "RB",
+        "button": "More info",
+         "link":"./PlayersDetail/Yuki.html"
+    },
+    {
+        "image": "../images/Oscar.png",
+        "name": "Oscar Piastri",
+        "title": "McLaren",
+        "button": "More info",
+         "link":"./PlayersDetail/Oscar.html"
+    },
+    {
+        "image": "../images/Sergio.png",
+        "name": "Sergio Perez",
+        "title": "Red Bull",
+        "button": "More info",
+         "link":"./PlayersDetail/Sergio.html"
+    },
+    {
+        "image": "../images/George.png",
+        "name": "George Russel",
+        "title": "Mercedes-AMG",
+        "button": "More info",
+         "link":"./PlayersDetail/George.html"
+    },
+    {
+        "image": "../images/LAnce.png",
+        "name": "Lance Stroll",
+        "title": "Aston Martin",
+        "button": "More info",
+         "link":"./PlayersDetail/Lance.html"
+    }
+]

@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+}
+body {
+    font-family: "Play", sans-serif;
+}
+.navbar {
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    background-color: #030303;
+    text-decoration: none;
+    padding: 20px;
+    
+}
+.navbar img{
+    height: 20px;
+}
+.navbar-links ul{
+    display: flex;    
+}
+.navbar-links li {
+    /* background-color: white; */
+    border-radius: 35px 35px 35px 35px;
+    margin: 0px 25px;
+    font-weight: bold;
+    font-family:"Play", sans-serif;
+}
+.navbar-links a{
+    text-decoration: none;
+    color: red;
+    font-size: 20px;
+}
+.navbar-links{
+    margin-left: auto;
+}
+.main-box{
+    display: flex;
+    background-color:white;
+}
+.footer-box{
+    background-color: #000000;
+    position: relative;
+    max-height: 200px;
+    margin-bottom:auto;
+}
+.footer-box p{
+    font-size: 15px;
+    color: grey;
+}
+/*  
+
+.card {
+    box-shadow: 10px 20px 8px 0px rgba(0.9, 0.7, 0.5, 0.4);
+    width: 300px;
+    max-width: 350px;
+    max-height: 400px;
+    margin: 30px;
+    text-align: center;
+    background-color: black;
+    border-radius: 35px 35px 35px 35px;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    flex-direction: column;
+    
+  }
+  .card h1{
+    color: white;
+    font-size:large
+    
+  }
+  .card img{
+    height: 200px;
+    width:150px;
+    border-radius: 35px 35px 35px 35px;
+  }
+  
+  .title {
+    color: red;
+    font-size: 18px;
+    font-weight: bolder;
+  }
+  
+  button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 10px;
+    color: white;
+    background-color: red;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 15px;
+    border-radius: 0px 0px 35px 35px;
+  }
+  
+  a {
+    text-decoration: none;
+    font-size: 22px;
+    color: white;
+  }
+  
+  button:hover, a:hover {
+    opacity: 0.9;
+  }
