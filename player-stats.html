@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+      font-family: 'Arial', sans-serif;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 12px;
+      text-align: left;
+      background-color: #fff;
+      transition: background-color 0.3s ease;
+    }
+
+    th {
+      background-color: #f2f2f2;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    td.driver-name:hover {
+      color: #fff;
+      background-color: #4CAF50;
+      cursor: pointer;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f5f5f5;
+    }
+
+    tr:hover {
+      background-color: black;
+    }
+
+    td.points {
+      font-weight: bold;
+      text-align: right;
+    }
+  </style>
+</head>
+<body>
+
+<table>
+  <tr>
+    <th>Rank</th>
+    <th>Driver</th>
+    <th>Nationality</th>
+    <th>Team</th>
+    <th>Points</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td class="driver-name">Max Verstappen</td>
+    <td>NED</td>
+    <td>Red Bull Racing Honda RBPT</td>
+    <td class="points">295</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td class="driver-name">Lando Norris</td>
+    <td>BRIT</td>
+    <td>Mclaren</td>
+    <td class="points">225</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td class="driver-name">Charles Leclerc</td>
+    <td>ITA</td>
+    <td>Ferrari</td>
+    <td class="points">192</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td class="driver-name">Oscar Piastri</td>
+    <td>AUS</td>
+    <td>Mclaren</td>
+    <td class="points">179</td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td class="driver-name">Carlos Sainz</td>
+    <td>SPA</td>
+    <td>Ferrari</td>
+    <td class="points">172</td>
+  </tr>
+  <tr>
+    <td>6</td>
+    <td class="driver-name">Lewis Hamilton</td>
+    <td>BRIT</td>
+    <td>Mercedes</td>
+    <td class="points">154</td>
+  </tr>
+  <tr>
+    <td>7</td>
+    <td class="driver-name">Sergio Perez</td>
+    <td>MEX</td>
+    <td>Red Bull Racing Honda RBPT</td>
+    <td class="points">139</td>
+  </tr>
+  <tr>
+    <td>8</td>
+    <td class="driver-name">George Russell</td>
+    <td>BRIT</td>
+    <td>Mercedes</td>
+    <td class="points">122</td>
+  </tr>
+  <tr>
+    <td>9</td>
+    <td class="driver-name">Fernando Alonso</td>
+    <td>SPA</td>
+    <td>Aston Martin</td>
+    <td class="points">50</td>
+  </tr>
+  <tr>
+    <td>10</td>
+    <td class="driver-name">Lance Stroll</td>
+    <td>CAN</td>
+    <td>Aston Martin</td>
+    <td class="points">24</td>
+  </tr>
+  <tr>
+    <td>11</td>
+    <td class="driver-name">Nico Hulkenburg</td>
+    <td>GER</td>
+    <td>Haas</td>
+    <td class="points">22</td>
+  </tr>
+  <tr>
+    <td>12</td>
+    <td class="driver-name">Yuki Tsunoda</td>
+    <td>JAP</td>
+    <td>RB</td>
+    <td class="points">22</td>
+  </tr>
+  <tr>
+    <td>13</td>
+    <td class="driver-name">Daniel Riccardo</td>
+    <td>AUS</td>
+    <td>RB</td>
+    <td class="points">12</td>
+  </tr>
+  <tr>
+    <td>14</td>
+    <td class="driver-name">Pierre Gasly</td>
+    <td>FRA</td>
+    <td>Alpine</td>
+    <td class="points">8</td>
+  </tr>
+  <tr>
+    <td>15</td>
+    <td class="driver-name">Kevin Magnussen</td>
+    <td>DEN</td>
+    <td>Haas</td>
+    <td class="points">5</td>
+  </tr>
+  <tr>
+    <td>16</td>
+    <td class="driver-name">Esteban Ocon</td>
+    <td>FRA</td>
+    <td>Alpine</td>
+    <td class="points">5</td>
+  </tr>
+  <tr>
+    <td>17</td>
+    <td class="driver-name">Alexander Albon</td>
+    <td>THAI</td>
+    <td>Williams</td>
+    <td class="points">4</td>
+  </tr>
+  <tr>
+    <td>18</td>
+    <td class="driver-name">Logan Sargeant</td>
+    <td>USA</td>
+    <td>Williams</td>
+    <td class="points">0</td>
+  </tr>
+  <tr>
+    <td>19</td>
+    <td class="driver-name">Zhou Guanyu</td>
+    <td>China</td>
+    <td>Kick-Sauber</td>
+    <td class="points">0</td>
+  </tr>
+  <tr>
+    <td>20</td>
+    <td class="driver-name">Valtteri Bottas</td>
+    <td>FIN</td>
+    <td>Kick-Sauber</td>
+    <td class="points">0</td>
+  </tr>
+</table>
+
+</body>
+</html>

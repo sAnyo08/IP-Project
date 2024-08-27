@@ -64,6 +64,7 @@ onValue(playersRef, (snapshot) => {
         const playerImage = document.createElement('img');
         playerImage.className = 'playerimg'; // Assign a class for styling
         playerImage.src = childData.image; // Set the image source
+        playerImage.alt = childData.playerName
         // playerImage.alt = childData.playerName; // Optional: Set an alt text for accessibility
         playerCard.appendChild(playerImage); // Add the image to the card
 

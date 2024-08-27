@@ -7,3 +7,15 @@
     overflow: hidden;
     grid-auto-flow: dense; /* Ensure dense packing of grid items */
 }
+
+.border-box {
+    width: 600px; /* Adjust width as needed */
+    height: 100px; /* Adjust height as needed */
+    margin-top: 20px;
+    border-top: 2px solid #000;
+    border-right: 5px solid #000;
+    border-radius: 30px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    margin-left: 26.8px;
+}

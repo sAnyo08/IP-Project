@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" src="Admin.css">
     <title>Forms for Players and Teams</title>
 </head>
 <body>
+    
     <h2>Player Registration Form</h2>
+    <div class="card">
     <form id="playerForm">
         <label for="playerName">Player Name:</label><br>
         <input type="text" id="playerName" name="playerName" required><br><br>
@@ -19,21 +22,26 @@
 
         <button type="submit">Register Player</button>
     </form>
+</div>
 
     <h2>Team Registration Form</h2>
+    <div class="card">
     <form id="teamForm">
-        <label for="teamName">Team Name:</label><br>
-        <input type="text" id="teamName" name="teamName" required><br><br>
+        <!-- <label for="teamName">Team Name:</label><br>
+        <input type="text" id="teamName" name="teamName" required><br><br> -->
 
-        <label for="teamLeader">Team Leader:</label><br>
-        <input type="text" id="teamLeader" name="teamLeader" required><br><br>
+        <label for="teamLeader">Name</label><br>
+        <input type="text" id="teamposition" name="teamLeader" required><br><br>
 
-        <label for="teamMembers">Number of Team Members:</label><br>
-        <input type="text" id="teamMembers" name="teamMembers" required><br><br>
+        <label for="teamMembers">Points:</label><br>
+        <input type="text" id="teampoints" name="teamMembers" required><br><br>
+
+        <label for="image">Image URL:</label><br>
+        <input type="text" id="image1" name="image1" required><br><br>
 
         <button type="submit">Register Team</button>
     </form>
-
+</div>
     <script type="module">
         // Import the necessary Firebase functions
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js";
@@ -77,24 +85,28 @@
                 alert('Error adding player: ' + error.message);
             });
         });
-            form.reset();
+
+
         // Handle Team Form Submission
         const form1=document.getElementById('teamForm').addEventListener('submit', function(event) {
             event.preventDefault(); // Prevent form from submitting the traditional way
 
-            const teamName = document.getElementById('teamName').value;
-            const teamLeader = document.getElementById('teamLeader').value;
-            const teamMembers = document.getElementById('teamMembers').value;
+            // const teamName = document.getElementById('teamName').value;
+            const teamposition = document.getElementById('teamposition').value;
+            const teampoints = document.getElementById('teampoints').value;
+            const images = document.getElementById('image1').value;
 
             // Save data to Firebase under 'teams' branch
             push(ref(database, 'teams'), {
-                teamName: teamName,
-                teamLeader: teamLeader,
-                teamMembers: teamMembers
+                // teamName: teamName,
+                teamposition: teamposition,
+                teampoints: teampoints,
+                teamImage:images
             })
             .then(() => {
                 console.log('Team added successfully!');
                 alert('Team registered successfully!');
+
             })
             .catch((error) => {
                 console.error('Error adding team:', error.message);
@@ -102,7 +114,6 @@
             });
         });
 
-        form1.reset();
     </script>
 </body>
 </html>

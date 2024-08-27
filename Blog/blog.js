@@ -39,6 +39,7 @@ onValue(blogRef, (snapshot) => {
     // Add the blog image to the card
     const blogImage = document.createElement('img');
     blogImage.src = blog.Blog_image; // Use the blog image URL from the data
+    blogImage.alt=blog.User_name
     blogCard.appendChild(blogImage);
     console.log("image displayed");
 

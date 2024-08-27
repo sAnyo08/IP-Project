@@ -28,14 +28,17 @@ body {
 #blog-container {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column-reverse;
-    columns: 4; 
+    /* flex-direction: column-reverse; */
+    flex-direction: row;
+    /* columns: 4;  */
+    justify-content:space-around;
     column-gap: 10px; 
     align-items: flex-start;
     gap: 20px;
     padding: 20px;
     margin-top: -10px;
     overflow: hidden;
+    vertical-align: middle;
 }
 
 /* Blog card styling: Block display, set dimensions, border, and shadow */
@@ -48,6 +51,7 @@ body {
     /* overflow: hidden; */
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
+    vertical-align: middle;
     /* height: 500px; */
     /* word-wrap: break-word; */
     /* overflow-wrap:break-word ; */
@@ -72,14 +76,16 @@ body {
 
 /* Blog card title styling: Set font size */
 .blog-card h2 {
+    /* width: fit-content; */
     font-size: 20px;
-    word-wrap: break-word;
+    /* word-wrap: break-word; */
 }
 
 /* Blog card description styling: Set font size and color */
 .blog-card p {
     font-size: 1em;
     color: #666;
+    /* width: 90%; */
     /* text-wrap: wrap; */
     overflow-wrap:break-word ;
     word-wrap: break-word;
@@ -102,6 +108,7 @@ body {
 @media (max-width: 768px) {
     .blog-card {
         max-width: 90%; /* Adjust card width for smaller screens */
+        
     }
 
     .blog-card h2 {

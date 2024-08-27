@@ -137,3 +137,7 @@ p {
     margin-right: 10px; /* Space after checkmark */
     vertical-align: middle; /* Align checkmark with text */
 }
+
+label{
+    text-align: left;
+}

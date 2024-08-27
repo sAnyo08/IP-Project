@@ -14,27 +14,27 @@
 
     <script type="module">
         // Import the necessary Firebase functions
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js";
-        import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-database.js";
+        // import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js";
+        // import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-database.js";
 
         // Your web app's Firebase configuration
-        const firebaseConfig = {
-            apiKey: "AIzaSyClk69N05esYdgvv-MJufSKT2KG_UFB4bc",
-            authDomain: "dbms-42760.firebaseapp.com",
-            databaseURL: "https://dbms-42760-default-rtdb.asia-southeast1.firebasedatabase.app",
-            projectId: "dbms-42760",
-            storageBucket: "dbms-42760.appspot.com",
-            messagingSenderId: "453104023779",
-            appId: "1:453104023779:web:fa3411a345e11704a4edd6"
-        };
+        // const firebaseConfig = {
+        //     apiKey: "AIzaSyClk69N05esYdgvv-MJufSKT2KG_UFB4bc",
+        //     authDomain: "dbms-42760.firebaseapp.com",
+        //     databaseURL: "https://dbms-42760-default-rtdb.asia-southeast1.firebasedatabase.app",
+        //     projectId: "dbms-42760",
+        //     storageBucket: "dbms-42760.appspot.com",
+        //     messagingSenderId: "453104023779",
+        //     appId: "1:453104023779:web:fa3411a345e11704a4edd6"
+        // };
 
         // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-        const database = getDatabase(app);
+        // const app = initializeApp(firebaseConfig);
+        // const database = getDatabase(app);
 
         // Reference to the players and teams data in the database
         // const playersRef = ref(database, 'players');
-        const teamsRef = ref(database, 'teams');
+        // const teamsRef = ref(database, 'teams');
 
         // Fetch and display players data
         // onValue(playersRef, (snapshot) => {
@@ -68,16 +68,16 @@
         // });
 
         // Fetch and display teams data
-        onValue(teamsRef, (snapshot) => {
-            const teamsList = document.getElementById('teamsList');
-            teamsList.innerHTML = ''; // Clear the list before adding new data
-            snapshot.forEach(childSnapshot => {
-                const childData = childSnapshot.val();
-                const listItem = document.createElement('li');
-                listItem.textContent = `Team: ${childData.teamName}, Leader: ${childData.teamLeader}, Members: ${childData.teamMembers}`;
-                teamsList.appendChild(listItem);
-            });
-        });
+        // onValue(teamsRef, (snapshot) => {
+        //     const teamsList = document.getElementById('teamsList');
+        //     teamsList.innerHTML = ''; // Clear the list before adding new data
+        //     snapshot.forEach(childSnapshot => {
+        //         const childData = childSnapshot.val();
+        //         const listItem = document.createElement('li');
+        //         listItem.textContent = `Team: ${childData.teamName}, Leader: ${childData.teamLeader}, Members: ${childData.teamMembers}`;
+        //         teamsList.appendChild(listItem);
+        //     });
+        // });
     </script>
 </body>
 </html>

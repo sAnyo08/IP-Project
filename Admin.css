@@ -1,0 +1,50 @@
+/* General styles for the body */
+body {
+    font-family: Arial, sans-serif;
+    /* background-color: #f0f0f0; */
+    padding: 20px;
+  }
+  
+  /* Styles for the form headings */
+  h2 {
+    color: #333;
+  }
+  /* General styles for the forms */
+  form {
+    background-color: rgb(152, 152, 152);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Styles for the form labels */
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  /* Styles for the form inputs */
+  input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  /* Styles for the form buttons */
+  button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
