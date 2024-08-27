@@ -72,8 +72,8 @@ body {
 
 /* Blog card title styling: Set font size */
 .blog-card h2 {
+    width: fit-content;
     font-size: 20px;
-    word-wrap: break-word;
 }
 
 /* Blog card description styling: Set font size and color */
@@ -81,6 +81,7 @@ body {
     font-size: 1em;
     color: #666;
     /* text-wrap: wrap; */
+    width:90%;
     overflow-wrap:break-word ;
     word-wrap: break-word;
 }
@@ -101,7 +102,7 @@ body {
 /* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
     .blog-card {
-        max-width: 90%; /* Adjust card width for smaller screens */
+        max-width: 100%; /* Adjust card width for smaller screens */
     }
 
     .blog-card h2 {
