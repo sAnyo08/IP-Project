@@ -28,20 +28,18 @@ body {
 #blog-container {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column-reverse;
-    columns: 4; 
-    column-gap: 10px; 
-    align-items: flex-start;
     gap: 20px;
     padding: 20px;
     margin-top: -10px;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 /* Blog card styling: Block display, set dimensions, border, and shadow */
 .blog-card {
     display: flex; /* Change to block to allow full control over content width */
     flex-direction: column;
+    max-width: 600px;
+    min-width: 480px;
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -115,6 +113,7 @@ body {
 }
 
 @media (max-width: 480px) {
+    
     .blog-card h2 {
         font-size: 1em; /* Further adjust font size for very small screens */
     }
