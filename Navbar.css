@@ -1,0 +1,120 @@
+.navbar {
+    /* position: fixed; Ensure the navbar stays at the top */
+    top: 0; /* Position it at the top */
+    left: 0;
+    width: 100%; /* Make it full-width */
+    display: flex;
+    justify-content:space-between;
+    /* align-items: center; */
+    background-color: #030303;
+    padding: 20px;
+    /* z-index: 1000; Ensure it appears above other elements */
+}
+
+.navbar img {
+    height: 20px;
+}
+
+.navbar-links ul {
+    display: flex;
+    margin-left: auto;
+    list-style: none;
+}
+
+.navbar-links li {
+    border-radius: 35px;
+    margin: 0px 25px;
+    font-weight: bold;
+    font-family: "Play", sans-serif;
+}
+
+.navbar-links a {
+    text-decoration: none;
+    color: red;
+    font-size: 20px;
+}
+
+.navbar-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: red;
+}
+.navbar.active .navbar-links ul {
+    display: flex; /* Show the links when the navbar is active */
+}
+/* ----------------------------------------------- */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        /* padding: 10px; */
+        color: #ddd;
+    }
+
+    .navbar-links ul {
+        display: none;
+        flex-direction:column;
+        align-items: center;
+        width: 100%;
+        color: #fff;
+    }
+    .navbar.active .navbar-links ul {
+        display: flex; /* Show the links when the navbar is active */
+    }
+
+    .navbar-toggle {
+        display: block;
+        cursor: pointer;
+        font-size: 20px;
+        color: red;
+    }
+
+    .navbar-toggle.active + .navbar-links ul {
+        display: flex; /* Show the links when the toggle is active */
+    }
+    .navbar-links li {
+        /* margin: 10px 0; */
+        color: #fff;
+    }
+}
+
+/* Smaller screens */
+@media (max-width: 480px) {
+    .navbar {
+        padding: 5px;
+        color: white;
+    }
+
+    .navbar img {
+        height: 18px;
+    }
+
+    .navbar-links a {
+        font-size: 18px;
+    }
+
+    .navbar-links ul {
+        display: none; /* Initially hide the links */
+        flex-direction:column;
+    }
+
+    .navbar.active .navbar-links ul {
+        display: flex; /* Show the links when the navbar is active */
+    }
+
+    .navbar-toggle {
+        display: block;
+        cursor: pointer;
+        font-size: 20px;
+        color: red;
+    }
+
+    .navbar-toggle.active + .navbar-links ul {
+        display: flex; /* Show the links when the toggle is active */
+    }
+}
+
+
+h5{
+    color: #7c7c7c;
+  }

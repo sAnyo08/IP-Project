@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Players and Teams</title>
+</head>
+<body>
+    <!-- <h2>Players List</h2>
+    <div id="playersList"></div> -->
+
+    <h2>Teams List</h2>
+    <ul id="teamsList"></ul>
+
+    <script type="module">
+        // Import the necessary Firebase functions
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js";
+        import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-database.js";
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyClk69N05esYdgvv-MJufSKT2KG_UFB4bc",
+            authDomain: "dbms-42760.firebaseapp.com",
+            databaseURL: "https://dbms-42760-default-rtdb.asia-southeast1.firebasedatabase.app",
+            projectId: "dbms-42760",
+            storageBucket: "dbms-42760.appspot.com",
+            messagingSenderId: "453104023779",
+            appId: "1:453104023779:web:fa3411a345e11704a4edd6"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const database = getDatabase(app);
+
+        // Reference to the players and teams data in the database
+        // const playersRef = ref(database, 'players');
+        const teamsRef = ref(database, 'teams');
+
+        // Fetch and display players data
+        // onValue(playersRef, (snapshot) => {
+        //     const playersList = document.getElementById('playersList');
+        //     playersList.innerHTML = ''; // Clear the list before adding new data
+        //     snapshot.forEach(childSnapshot => {
+        //         const childData = childSnapshot.val();
+                
+        //         // Create a div to hold player data
+        //         const playerCard = document.createElement('div');
+        //         playerCard.className = 'player-card';
+
+        //         // Create and append an image element
+        //         const playerImage = document.createElement('img');
+        //         playerImage.src = childData.image;
+        //         playerImage.alt = `${childData.playerName}'s image`;
+        //         playerCard.appendChild(playerImage);
+
+        //         // Create and append a player name element
+        //         const playerName = document.createElement('h3');
+        //         playerName.textContent = `Name: ${childData.playerName}`;
+        //         playerCard.appendChild(playerName);
+
+        //         // Create and append a team name element
+        //         const teamName = document.createElement('p');
+        //         teamName.textContent = `Team: ${childData.teamName}`;
+        //         playerCard.appendChild(teamName);
+
+        //         playersList.appendChild(playerCard);
+        //     });
+        // });
+
+        // Fetch and display teams data
+        onValue(teamsRef, (snapshot) => {
+            const teamsList = document.getElementById('teamsList');
+            teamsList.innerHTML = ''; // Clear the list before adding new data
+            snapshot.forEach(childSnapshot => {
+                const childData = childSnapshot.val();
+                const listItem = document.createElement('li');
+                listItem.textContent = `Team: ${childData.teamName}, Leader: ${childData.teamLeader}, Members: ${childData.teamMembers}`;
+                teamsList.appendChild(listItem);
+            });
+        });
+    </script>
+</body>
+</html>

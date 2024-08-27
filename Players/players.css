@@ -1,121 +1,91 @@
+/* Apply a consistent box-sizing model, reset margins and paddings, and set default font family for all elements */
 * {
-    margin: 0;
-    padding: 0;
-    /* box-sizing: border-box; */
-}
-body {
-    font-family: "Play", sans-serif;
-    
-}
-.navbar {
-    display: flex;
-    justify-content:flex-start;
-    /* align-items: center; */
-    background-color: #030303;
-    text-decoration: none;
-    padding: 20px;
-    
-}
-.navbar img{
-    height: 20px;
-}
-.navbar-links ul{
-    display: flex;    
-}
-.navbar-links li {
-    /* background-color: white; */
-    border-radius: 35px 35px 35px 35px;
-    margin: 0px 25px;
-    font-weight: bold;
-    font-family:"Play", sans-serif;
-}
-.navbar-links a{
-    text-decoration: none;
-    color: red;
-    font-size: 20px;
-}
-.navbar-links{
-    margin-left: auto;
-}
-/* .main-box{
-    display: flex;
-    background-color:white;
-} */
-.footer-box{
-    background-color: #333232;
-    position: relative;
-    max-height: 200px;
-    margin-bottom:auto;
-    /* position: fixed; */
-    /* bottom: 0; */
-}
-.footer-box p{
-    font-size: 15px;
-    color: rgb(250, 250, 250);
-}
-/* --------------------------------------------------------------------------------------- */
-.products {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px,1fr)); /* Responsive columns */
-    gap: 20px; /* Space between cards */
-    /* padding: 10px; */
-    justify-content: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Play", sans-serif;
 }
 
+/* Style for footer section */
+.footer-box {
+  background-color: #000000; /* Dark background for footer */
+  position: relative; /* Footer positioned relative to its container */
+  max-height: 200px; /* Limit the maximum height of the footer */
+  margin-bottom: auto; /* Ensure footer stays at the bottom */
+}
+
+.footer-box p {
+  font-size: 15px; /* Font size for text in the footer */
+  color: rgb(250, 250, 250); /* Light color for text in the footer */
+}
+
+/* Style for the container of product cards */
+.products {
+  display: grid; /* Use CSS Grid layout */
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive columns with a minimum width of 250px */
+  gap: 10px; /* Space between cards */
+  justify-content: center; /* Center the grid items */
+}
+
+/* Style for individual product cards */
 .card {
-    box-shadow: 10px 20px 8px 0px rgba(0.4, 0.7, 0.9, 0.4);
-    /* width: 300px; */
-    max-width: 250px;
-    max-height: 400px;
-    margin: 25px;
-    text-align: center;
-    background-color: black;
-    border-radius: 30px 30px 30px 30px;
-    /* flex-wrap: wrap; */
-    overflow: hidden;
-    
-    
-  }
-  .card h1{
-    color: white;
-    font-size:large
-    
-  }
-.playerimg{
-    height: 200px;
-    width:250px;
-    border-radius: 30px 30px 0px 0px;
-  }
-  
-  .title {
-    color: red;
-    font-size: 18px;
-    font-weight: bolder;
-  }
-  
-  .buttons {
-    border: none;
-    outline: 0;
-    /* display: inline-block; */
-    padding: 10px;
-    color: black;
-    background-color: red;
-    text-align: center;
-    cursor: pointer;
-    width: 100%;
-    font-size: 15px;
-    font-weight: bold;
-    border-radius: 0px 0px 30px 30px;
-    font-family: "Play", sans-serif;
-  }
-  
-  a {
-    text-decoration: none;
-    font-size: 22px;
-    color: white;
-  }
-  
-  .buttons:hover {
-    opacity: 0.9;
-    background-color: rgb(218, 0, 0);
-  }
+  box-shadow: 10px 20px 8px rgba(0.4, 0.7, 0.9, 0.4); /* Shadow effect around the card */
+  max-width: 250px; /* Maximum width of the card */
+  max-height: 400px; /* Maximum height of the card */
+  margin: 20px; /* Space around each card */
+  text-align: center; /* Center-align text inside the card */
+  background-color: black; /* Background color for the card */
+  border-radius: 30px; /* Rounded corners for the card */
+  overflow: hidden; /* Hide overflowing content */
+}
+
+/* Style for the player's name inside the card */
+.name {
+  color: white; /* Text color for the player's name */
+  font-size: large; /* Font size for the player's name */
+}
+
+/* Style for the player's image */
+.playerimg {
+  height: 255px; /* Fixed height for the image */
+  width: 250px; /* Fixed width for the image */
+  border-radius: 30px 30px 0 0; /* Rounded top corners for the image */
+  justify-content: center; /* Center-align content inside the image */
+}
+
+/* Style for the team name inside the card */
+.title {
+  color: red; /* Text color for the team name */
+  font-size: 18px; /* Font size for the team name */
+  font-weight: bolder; /* Make the team name bold */
+  margin-bottom: 8px; /* Space below the team name */
+}
+
+/* Style for buttons inside the card */
+.buttons {
+  border: none; /* Remove border */
+  outline: 0; /* Remove outline */
+  padding: 10px; /* Padding inside the button */
+  color: black; /* Text color for the button */
+  background-color: red; /* Background color for the button */
+  text-align: center; /* Center-align text inside the button */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  width: 100%; /* Full width of the button */
+  font-size: 15px; /* Font size for the button text */
+  font-weight: bold; /* Make button text bold */
+  border-radius: 0 0 30px 30px; /* Rounded bottom corners for the button */
+  font-family: "Play", sans-serif; /* Font family for the button text */
+}
+
+/* Hover effect for buttons */
+.buttons:hover {
+  opacity: 0.9; /* Slightly reduce opacity on hover */
+  background-color: rgb(218, 0, 0); /* Darker red background on hover */
+}
+
+/* Style for links inside the card */
+a {
+  text-decoration: none; /* Remove underline from links */
+  font-size: 22px; /* Font size for link text */
+  color: white; /* Text color for links */
+}

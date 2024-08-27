@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms for Players and Teams</title>
+</head>
+<body>
+    <h2>Player Registration Form</h2>
+    <form id="playerForm">
+        <label for="playerName">Player Name:</label><br>
+        <input type="text" id="playerName" name="playerName" required><br><br>
+
+        <label for="teamName">Team Name:</label><br>
+        <input type="text" id="teamName" name="teamName" required><br><br>
+
+        <label for="image">Image URL:</label><br>
+        <input type="text" id="image" name="image" required><br><br>
+
+        <button type="submit">Register Player</button>
+    </form>
+
+    <h2>Team Registration Form</h2>
+    <form id="teamForm">
+        <label for="teamName">Team Name:</label><br>
+        <input type="text" id="teamName" name="teamName" required><br><br>
+
+        <label for="teamLeader">Team Leader:</label><br>
+        <input type="text" id="teamLeader" name="teamLeader" required><br><br>
+
+        <label for="teamMembers">Number of Team Members:</label><br>
+        <input type="text" id="teamMembers" name="teamMembers" required><br><br>
+
+        <button type="submit">Register Team</button>
+    </form>
+
+    <script type="module">
+        // Import the necessary Firebase functions
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js";
+        import { getDatabase, ref, push } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-database.js";
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyClk69N05esYdgvv-MJufSKT2KG_UFB4bc",
+            authDomain: "dbms-42760.firebaseapp.com",
+            databaseURL: "https://dbms-42760-default-rtdb.asia-southeast1.firebasedatabase.app",
+            projectId: "dbms-42760",
+            storageBucket: "dbms-42760.appspot.com",
+            messagingSenderId: "453104023779",
+            appId: "1:453104023779:web:fa3411a345e11704a4edd6"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const database = getDatabase(app);
+
+        // Handle Player Form Submission
+        const form =document.getElementById('playerForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form from submitting the traditional way
+
+            const playerName = document.getElementById('playerName').value;
+            const teamName = document.getElementById('teamName').value;
+            const image = document.getElementById('image').value;
+
+            // Save data to Firebase under 'players' branch
+            push(ref(database, 'players'), {
+                playerName: playerName,
+                teamName: teamName,
+                image: image
+            })
+            .then(() => {
+                console.log('Player added successfully!');
+                alert('Player registered successfully!');
+            })
+            .catch((error) => {
+                console.error('Error adding player:', error.message);
+                alert('Error adding player: ' + error.message);
+            });
+        });
+            form.reset();
+        // Handle Team Form Submission
+        const form1=document.getElementById('teamForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form from submitting the traditional way
+
+            const teamName = document.getElementById('teamName').value;
+            const teamLeader = document.getElementById('teamLeader').value;
+            const teamMembers = document.getElementById('teamMembers').value;
+
+            // Save data to Firebase under 'teams' branch
+            push(ref(database, 'teams'), {
+                teamName: teamName,
+                teamLeader: teamLeader,
+                teamMembers: teamMembers
+            })
+            .then(() => {
+                console.log('Team added successfully!');
+                alert('Team registered successfully!');
+            })
+            .catch((error) => {
+                console.error('Error adding team:', error.message);
+                alert('Error adding team: ' + error.message);
+            });
+        });
+
+        form1.reset();
+    </script>
+</body>
+</html>

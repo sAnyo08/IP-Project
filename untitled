@@ -1,0 +1,9 @@
+#blog-container {
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(auto-fill, minmax(480px, 1fr)); /* Create responsive columns */
+    gap: 20px; /* Space between grid items */
+    padding: 20px;
+    margin-top: 0; /* Reset margin-top to align properly */
+    overflow: hidden;
+    grid-auto-flow: dense; /* Ensure dense packing of grid items */
+}

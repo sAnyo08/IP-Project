@@ -1,8 +1,11 @@
+/* Reset default margins and paddings, and apply border-box model to all elements */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+/* Body styling: Remove margins, paddings, set font, and background color */
 body {
     margin: 0;
     padding: 0;
@@ -10,189 +13,136 @@ body {
     font-family: "Play", sans-serif;
     background-color: #e4e3e3;
 }
-body {
-    margin: 0;
-    padding: 0;
-    font-family: "Play", sans-serif;
-    background-color: #e4e3e3;
-}
 
-.navbar {
-    position: fixed; /* Ensure the navbar stays at the top */
-    top: 0; /* Position it at the top */
-    left: 0;
-    width: 100%; /* Make it full-width */
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    background-color: #030303;
-    padding: 20px;
-    z-index: 1000; /* Ensure it appears above other elements */
-}
-
-.navbar img {
-    height: 20px;
-}
-
-.navbar-links ul {
-    display: flex;
-    margin-left: auto;
-}
-
-.navbar-links li {
-    border-radius: 35px;
-    margin: 0px 25px;
-    font-weight: bold;
-    font-family: "Play", sans-serif;
-}
-
-.navbar-links a {
-    text-decoration: none;
-    color: red;
-    font-size: 20px;
-}
-
+/* ------------------------------------------------ */
+/* Main content box styling: Set display as flex with a white background */
 .main-box {
     display: flex;
     background-color: white;
     margin-top: 80px; /* Add margin to prevent content overlap with fixed navbar */
 }
 
+
 /* ----------------------------------- */
+/* Blog container styling: Flex container with column wrapping and reverse order */
 #blog-container {
     display: flex;
     flex-wrap: wrap;
-    columns:4;
-    column-gap: 10px;
-    /* justify-content: center; */
+    flex-direction: column-reverse;
+    columns: 4; 
+    column-gap: 10px; 
     align-items: flex-start;
     gap: 20px;
     padding: 20px;
-    margin-top: 100px;
+    margin-top: -10px;
     overflow: hidden;
 }
 
+/* Blog card styling: Block display, set dimensions, border, and shadow */
 .blog-card {
-    display: block; /* Change to block to allow full control over content width */
+    display: flex; /* Change to block to allow full control over content width */
+    flex-direction: column;
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
-    overflow: hidden;
+    /* overflow: hidden; */
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
-    width: auto; /* Ensure the card fits its content */
-    max-width: 100%; /* Prevents overflow on smaller screens */
+    /* height: 500px; */
+    /* word-wrap: break-word; */
+    /* overflow-wrap:break-word ; */
+    /* max-width: 100%; Prevent overflow on smaller screens */
+
 }
 
+/* Blog card image styling: Set maximum width and maintain aspect ratio */
 .blog-card img {
     max-width: 600px; /* Set the maximum width of the image */
     width: 100%; /* Image takes full width of the card */
-    height: auto; /* Maintain aspect ratio */
-    display: block;
+     height: auto; /*Maintain aspect ratio */
+    /* display: block; */
 }
 
+/* Blog card text elements (h2, p, h5) styling: Set margins and text color */
 .blog-card h2, .blog-card p, .blog-card h5 {
     margin: 15px;
     color: #333;
     width: 500px; 
 }
 
+/* Blog card title styling: Set font size */
 .blog-card h2 {
     font-size: 20px;
+    word-wrap: break-word;
 }
 
+/* Blog card description styling: Set font size and color */
 .blog-card p {
-    font-size: 14px;
+    font-size: 1em;
     color: #666;
+    /* text-wrap: wrap; */
+    overflow-wrap:break-word ;
+    word-wrap: break-word;
 }
 
+/* Blog card author name styling: Set font size, color, and text alignment */
 .blog-card h5 {
     font-size: 12px;
     color: #999;
     text-align: right;
 }
 
-
-
-@media (max-width: 768px) {
+/* Media query for smaller screens (max-width 768px): Adjust blog card width */
+/* @media (max-width: 768px) {
     .blog-card {
         width: 100%; /* Full-width on smaller screens */
+    /* }
+}  */
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .blog-card {
+        max-width: 90%; /* Adjust card width for smaller screens */
+    }
+
+    .blog-card h2 {
+        font-size: 1.2em; /* Adjust font size for titles */
+    }
+
+    .blog-card p {
+        font-size: 0.9em; /* Adjust font size for descriptions */
     }
 }
 
+@media (max-width: 480px) {
+    .blog-card h2 {
+        font-size: 1em; /* Further adjust font size for very small screens */
+    }
 
-.navbar {
-    display: flex;
-    justify-content:flex-start;
-    align-items: center;
-    background-color: #030303;
-    text-decoration: none;
-    padding: 20px;
-    
+    .blog-card p {
+        font-size: 0.8em; /* Further adjust font size for very small screens */
+    }
 }
-.navbar img{
-    height: 20px;
-}
-.navbar-links ul{
-    display: flex;    
-}
-.navbar-links li {
-    /* background-color: white; */
-    border-radius: 35px 35px 35px 35px;
-    margin: 0px 25px;
-    font-weight: bold;
-    font-family:"Play", sans-serif;
-}
-.navbar-links a{
-    text-decoration: none;
-    color: red;
-    font-size: 20px;
-}
-.navbar-links{
-    margin-left: auto;
-}
-.dropdown {
-    position: relative;
-    display: inline-block;
-  }
-  /* --------------------------------------------------------------------------------- */
-.main-box{
-    display: flex;
-    background-color:white;
-}
-.footer-box{
+/* --------------------------------------------------------------------------------- */
+
+/* Footer styling: Set background color, bottom alignment, and width */
+.footer-box {
     background-color: #000000;
     /* position:fixed; */
     bottom: 0;
     max-height: 200px;
-    margin-bottom:auto;
+    margin-bottom: auto;
     width: 100%;
-    
 }
-.footer-box p{
+
+/* Footer text styling: Set font size and color */
+.footer-box p {
     font-size: 15px;
     color: grey;
 }
+
 /* ---------------main content------------------------------ */
-form {
-    display: flex;
-    flex-direction: column;
-}
-input, textarea {
-    margin-bottom: 10px;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    max-width: 300px;
-}
 
-input[type="text"], 
-input[type="url"], 
-textarea {
-    background-color: #F9FAFB;
-    color: #374151;
-}
-
+/* Button styling: Set background color, padding, border-radius, and cursor */
 button {
     background-color: #ff0000;
     color: white;
@@ -200,32 +150,28 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    /* margin-top: 20px; */
-    /* justify-content:flex-end; */
-    align-items: center;
     width: 130px;
     margin-top: 7px;
     font-weight: bold;
     margin-left: 10px;
 }
 
+/* Button hover effect: Darken the background color on hover */
 button:hover {
     background-color: #cd0000;
 }
 
-.upload{
+/* Upload button styling: Set background color, border-radius, height, and width */
+.upload {
     background-color: #000000;
     color: white;
-    /* padding: 10px; */
     border-radius: 10px;
-    /* margin:5px; */
     height: 45px;
     width: 150px;
-    position: fixed;
-    top: 0;
     justify-content: center;
-    margin-top: 70px;
+    margin-top: 3px;
     margin-left: 100px;
 }
+
 
 
